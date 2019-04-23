@@ -30,8 +30,9 @@ namespace ida_address_convert
             output.Text = "";
             foreach (string s in a)
             {
-                MatchCollection t = Regex.Matches(a[0], pattern);
-                output.Text += string.Format("tb *0x{0}+0x{1}\r\n", address.Text, t[0].Value);
+                MatchCollection t = Regex.Matches(s, pattern);
+                if(t.Count > 0)
+                    output.Text += string.Format("tb *0x{0}+0x{1}\r\n", address.Text, t[0].Value);
             }
             
             
