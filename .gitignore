@@ -1,0 +1,13 @@
+# .gitignore
+# Copyright (C) 2018-2019 li 
+# All rights reserved.
+
+*.opendb
+*.db
+.vs/
+[Dd]ebug/
+[Rr]elease/
+[Rr]eleases/
+bin/
+obj/
+
